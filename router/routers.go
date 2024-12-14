@@ -1,6 +1,8 @@
 package router
 
 import (
+	"gokweb/controllers"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,9 +16,8 @@ func Router() *gin.Engine {
 
 	user := r.Group("/user")
 	{
-		user.GET("/list", func(ctx *gin.Context) {
-			ctx.JSON(200, gin.H{"data": "xiaoming"})
-		})
+		user.GET("/info", controllers.GetUserInfo)
+		user.GET("/list", controllers.GetList)
 
 		user.POST("/add", func(ctx *gin.Context) {
 			ctx.JSON(200, gin.H{"msg": "add successful"})
