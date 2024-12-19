@@ -1,0 +1,20 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /hello                    --> gokweb/router.Router.func1 (4 handlers)
+[GIN-debug] GET    /user/info/:id            --> gokweb/controllers.UserController.GetUserInfo-fm (4 handlers)
+[GIN-debug] GET    /user/list                --> gokweb/controllers.UserController.GetList-fm (4 handlers)
+[GIN-debug] POST   /user/add                 --> gokweb/router.Router.func2 (4 handlers)
+[GIN-debug] GET    /sport/list               --> gokweb/controllers.SportController.GetSports-fm (4 handlers)
+[GIN-debug] GET    /sport/sort               --> gokweb/controllers.SportController.SportSort-fm (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [16 Dec 24 21:36 CST]- 0s /user/list GET 401  0 map[] 
+::1 - [16 Dec 24 21:36 CST]- 0s /user/list GET 401  0 map[] 
+::1 - [16 Dec 24 21:36 CST]- 0s /user/list GET 401  0 map[] 
+::1 - [16 Dec 24 21:37 CST]- 0s /user/list GET 200  45 map[user:pragmatic] 
+::1 - [16 Dec 24 21:37 CST]- 0s /user/list GET 200  45 map[user:pragmatic] 
+::1 - [16 Dec 24 21:37 CST]- 0s /user/list GET 200  45 map[user:pragmatic] 
